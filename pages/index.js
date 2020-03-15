@@ -1,203 +1,103 @@
-import Head from 'next/head'
+import Head from "next/head";
+import { Layout, Menu, Col, Row } from "antd";
+import {
+    AppstoreOutlined,
+    MailOutlined,
+    SettingOutlined
+} from "@ant-design/icons";
 
-const Home = () => (
-  <div className="container">
-    <Head>
-      <title>Create Next App</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+const { Header, Footer, Sider, Content } = Layout;
 
-    <main>
-      <h1 className="title">
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
-      </h1>
+const { SubMenu } = Menu;
 
-      <p className="description">
-        Get started by editing <code>pages/index.js</code>
-      </p>
+function Container({ children }) {
+    return <div className="container">{children}</div>;
+}
 
-      <div className="grid">
-        <a href="https://nextjs.org/docs" className="card">
-          <h3>Documentation &rarr;</h3>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+export default function Hom() {
+    function handleClick(e) {
+        console.log("click ", e);
+    }
 
-        <a href="https://nextjs.org/learn" className="card">
-          <h3>Learn &rarr;</h3>
-          <p>Learn about Next.js in an interactive course with quizzes!</p>
-        </a>
-
-        <a
-          href="https://github.com/zeit/next.js/tree/master/examples"
-          className="card"
-        >
-          <h3>Examples &rarr;</h3>
-          <p>Discover and deploy boilerplate example Next.js projects.</p>
-        </a>
-
-        <a
-          href="https://zeit.co/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          className="card"
-        >
-          <h3>Deploy &rarr;</h3>
-          <p>
-            Instantly deploy your Next.js site to a public URL with ZEIT Now.
-          </p>
-        </a>
-      </div>
-    </main>
-
-    <footer>
-      <a
-        href="https://zeit.co?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Powered by <img src="/zeit.svg" alt="ZEIT Logo" />
-      </a>
-    </footer>
-
-    <style jsx>{`
-      .container {
-        min-height: 100vh;
-        padding: 0 0.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      main {
-        padding: 5rem 0;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      footer {
-        width: 100%;
-        height: 100px;
-        border-top: 1px solid #eaeaea;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      footer img {
-        margin-left: 0.5rem;
-      }
-
-      footer a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .title a {
-        color: #0070f3;
-        text-decoration: none;
-      }
-
-      .title a:hover,
-      .title a:focus,
-      .title a:active {
-        text-decoration: underline;
-      }
-
-      .title {
-        margin: 0;
-        line-height: 1.15;
-        font-size: 4rem;
-      }
-
-      .title,
-      .description {
-        text-align: center;
-      }
-
-      .description {
-        line-height: 1.5;
-        font-size: 1.5rem;
-      }
-
-      code {
-        background: #fafafa;
-        border-radius: 5px;
-        padding: 0.75rem;
-        font-size: 1.1rem;
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-      }
-
-      .grid {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        max-width: 800px;
-        margin-top: 3rem;
-      }
-
-      .card {
-        margin: 1rem;
-        flex-basis: 45%;
-        padding: 1.5rem;
-        text-align: left;
-        color: inherit;
-        text-decoration: none;
-        border: 1px solid #eaeaea;
-        border-radius: 10px;
-        transition: color 0.15s ease, border-color 0.15s ease;
-      }
-
-      .card:hover,
-      .card:focus,
-      .card:active {
-        color: #0070f3;
-        border-color: #0070f3;
-      }
-
-      .card h3 {
-        margin: 0 0 1rem 0;
-        font-size: 1.5rem;
-      }
-
-      .card p {
-        margin: 0;
-        font-size: 1.25rem;
-        line-height: 1.5;
-      }
-
-      @media (max-width: 600px) {
-        .grid {
-          width: 100%;
-          flex-direction: column;
-        }
-      }
-    `}</style>
-
-    <style jsx global>{`
-      html,
-      body {
-        padding: 0;
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-    `}</style>
-  </div>
-)
-
-export default Home
+    return (
+        <Layout>
+            <Header>
+                <Head>
+                    <title>«Просто дети» | Центр всестороннего развития</title>
+                    <link rel="icon" href="/favicon.ico" />
+                </Head>
+                <Container>
+                    <Row>
+                        <Col>Col</Col>
+                    </Row>
+                </Container>
+            </Header>
+            <Layout>
+                <Container>
+                    <Row>
+                        <Sider>
+                            <Menu
+                                onClick={handleClick}
+                                style={{ width: 256 }}
+                                defaultSelectedKeys={["1"]}
+                                defaultOpenKeys={["sub1"]}
+                                mode="inline"
+                            >
+                                <SubMenu
+                                    key="sub1"
+                                    title={
+                                        <span>
+                                            <MailOutlined />
+                                            <span>Navigation One</span>
+                                        </span>
+                                    }
+                                >
+                                    <Menu.ItemGroup key="g1" title="Item 1">
+                                        <Menu.Item key="1">Option 1</Menu.Item>
+                                        <Menu.Item key="2">Option 2</Menu.Item>
+                                    </Menu.ItemGroup>
+                                    <Menu.ItemGroup key="g2" title="Item 2">
+                                        <Menu.Item key="3">Option 3</Menu.Item>
+                                        <Menu.Item key="4">Option 4</Menu.Item>
+                                    </Menu.ItemGroup>
+                                </SubMenu>
+                                <SubMenu
+                                    key="sub2"
+                                    title={
+                                        <span>
+                                            <AppstoreOutlined />
+                                            <span>Navigation Two</span>
+                                        </span>
+                                    }
+                                >
+                                    <Menu.Item key="5">Option 5</Menu.Item>
+                                    <Menu.Item key="6">Option 6</Menu.Item>
+                                    <SubMenu key="sub3" title="Submenu">
+                                        <Menu.Item key="7">Option 7</Menu.Item>
+                                        <Menu.Item key="8">Option 8</Menu.Item>
+                                    </SubMenu>
+                                </SubMenu>
+                                <SubMenu
+                                    key="sub4"
+                                    title={
+                                        <span>
+                                            <SettingOutlined />
+                                            <span>Navigation Three</span>
+                                        </span>
+                                    }
+                                >
+                                    <Menu.Item key="9">Option 9</Menu.Item>
+                                    <Menu.Item key="10">Option 10</Menu.Item>
+                                    <Menu.Item key="11">Option 11</Menu.Item>
+                                    <Menu.Item key="12">Option 12</Menu.Item>
+                                </SubMenu>
+                            </Menu>
+                        </Sider>
+                    </Row>
+                </Container>
+                <Content>Content</Content>
+            </Layout>
+            <Footer>Footer</Footer>
+        </Layout>
+    );
+}
